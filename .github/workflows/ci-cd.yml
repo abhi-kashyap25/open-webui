@@ -20,13 +20,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.11'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        # Check if requirements.txt is in a subdirectory
-        pip install -r open-webui/backend/requirements.txt  # Adjust the path if necessary
-
+        
     - name: Run tests
       run: |
         echo "Running tests..."
