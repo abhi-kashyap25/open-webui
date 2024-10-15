@@ -24,13 +24,15 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        
+        pip install -r requirements.txt  # Install dependencies from the requirements file
+
     - name: Run tests
       run: |
-        # Assuming you have tests in a 'tests' directory
-        pytest tests/
+        echo "Running tests..."
+        pytest tests/  # Adjust if tests are located elsewhere
 
     - name: Deploy
       run: |
         echo "Deploying application..."
-        # Add deployment commands here
+        # Add deployment logic here, e.g., copy files to the appropriate server or location
+        # If using WSL, you might add specific WSL commands to start services locally
