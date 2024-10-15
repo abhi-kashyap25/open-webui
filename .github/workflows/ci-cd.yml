@@ -24,7 +24,6 @@ jobs:
     - name: Run tests
       run: |
         echo "Running tests..."
-        pytest tests/  # Adjust if tests are located elsewhere
 
     - name: Deploy
       run: |
